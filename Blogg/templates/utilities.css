@@ -1,0 +1,40 @@
+/* <!-- green #006f5c orange-#ff6719 --> */
+*
+{
+    font-family: 'Spectral', serif;
+    /* box-sizing: border-box; */
+    
+}
+.text-white
+{
+    color: white;
+}
+.my-bg
+{
+    background-color: #006f5c;
+}
+.text-green
+{
+    color: #006f5c;
+}
+.my-btn
+{
+    background-color: #ff6719;
+    color: white;
+    border:0px;
+}
+.my-btn:hover , .my-btn:active
+{
+    background-color: rgb(255, 103, 25,0.9);
+    color: rgba(255, 255, 255, 0.853);
+}
+#hero-image
+{
+    width: 80%;
+}
+.image-height
+{
+    height: 300px;
+    width: 100%;
+    border-radius: 20%;
+}

@@ -1,0 +1,9 @@
+ .navbar-overflow {
+    width: 100%; /* Set a maximum width for the container */
+    overflow-x: auto; /* Enable horizontal scroll bar when necessary */
+    white-space: nowrap; /* Prevent list items from wrapping */
+}
+.blog-box
+{
+    cursor: pointer;
+}

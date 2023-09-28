@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <link rel="Website icon" type="png" href="images/icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Blogg\css\utilities.css' %}" />
+    <link rel="stylesheet" href="{% static 'Blogg\css\style.css' %}" />
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- hero section -->
+  <div class="hero-section my-bg">
+    <!-- nav starts here -->
+    <nav class="navbar row m-0  my-bg d-flex">
+      <div class="d-flex col-7  align-items-center ">
+
+       <a href="#"> <i class="fa-regular fa-bookmark fa-3x m-2" style="color: #ff6719"></i></a>
+        <a href="#" class="navbar-brand primary-color mt-2 fs-1 text-white">SUBSTACK</a>
+      </div>
+      <div class="d-none col-4 d-lg-block row m-0  align-items-center  ">
+        <form class=" d-flex" role="search">
+          <input class="form-control  me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn me-2 text-white  border-white btn-outline-success" type="submit">
+            Search
+          </button>
+        <a  class="col" href="signup.html"><button type="button" class="btn me-1 my-btn text-nowrap ">Sign Up</button></a>
+      </div>
+    </form>
+    </nav>
+    <!-- nav ends here -->
+    <div class="row m-0 align-items-center">
+
+      <div class="col-md-6  m-0 p-2 ">
+        <blockquote class=" d-flex align-items-center blockquote"></blockquote>
+        <div class="content text-center">
+          <figure class="text-center">
+            <blockquote class="blockquote text-white fs-1">
+              <p>"Your words have the power to shape worlds, so let your thoughts dance on the page and paint a canvas
+                of inspiration for others to behold."</p>
+            </blockquote>
+            <figcaption class="blockquote-footer text-white">
+              Inspired by <cite title="Source Title">Chat GPT </cite>
+            </figcaption>
+          </figure>
+
+        </div>
+        <div class="d-grid text-center gap-2 col-6 mx-auto ">
+          <a href="/texteditor.html" target="_blank"><button class="btn  btn-lg my-btn m-4 fs-3" type="button">Start Writing!</button></a>
+        </div>
+      </div>
+      <div class="col-md-6 m-0 p-0 text-center order-1"><img src="{% static 'Blogg\images\hero_image.png' %}" id="hero-image" alt=""></div>
+    </div> 
+
+  </div>
+  <!-- hero section ends -->
+  <!-- blog-categories -->
+  <div class="content">
+    <p class="text-center fs-1 text-wrap mt-4 p-5">
+      A network for all independent writers and creators.
+    </p>
+  </div>
+  <div class="blog-categoires">
+    <ul class=" navbar-nav  nav-underline fs-3 m-3 border-bottom flex-row  justify-content-between ">
+      <li class="nav-item">
+        <a class="nav-link text-black" href="#blogs">Featured</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-black" href="#">Social</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link text-black" href="#">Political</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link text-black" href="#">Cultural</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-black" href="#">Technology</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-black" href="#">Education</a>
+      </li>
+     
+
+    </ul>
+
+  </div>
+  <div class="blogs" id="blogs">
+    <div class="row m-0 align-items-center">
+      <i class="col-auto fa-solid fa-arrow-trend-up fa-2x"></i>
+      <h3 class="col m-2 "> Trending Blogs </h3>
+    </div>
+    <div class=" row m-0 justify-content-center ">
+      
+      <div class="blog-box col-lg-4 col-10 border-end ">
+        <div class=" d-flex flex-column mb-3">
+          <div class="p-2"><img class="image-height" src="{% static 'Blogg\images\computer.jpg' %}"  alt="Technology"></div>
+          <div class="p-2 row m-0">
+            <h3 class="col-6 ">Computers-Master or Slave</h3><a class="col-6 text-end" href="blogs.html"><i
+                class=" fa-2x fa-solid  fa-arrow-up-right-from-square" style="color: #000000; "></i></a>
+          </div>
+          <div class="p-2">
+            <p class="p-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus pariatur sequi voluptates quae fugit,
+              excepturi aliquam blanditiis consectetur porro placeat.
+            </p>
+
+          </div>
+        </div>
+      </div>
+  
+      <div class="blog-box col-lg-4 col-10 border-end">
+        <div class="  d-flex flex-column mb-3">
+          <div class="p-2"><img class="image-height" src="{% static 'Blogg\images\art.jpg' %}"  alt="art"></div>
+          <div class="p-2 row m-0">
+            <h3 class="col-6 ">Artists makes the World!</h3> <a class="col-6 text-end" href="/blogs.html"><i
+                class=" fa-2x fa-solid  fa-arrow-up-right-from-square" style="color: #000000; "></i></a>
+          </div>
+          <div class="p-2">
+            <p class="p-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus pariatur sequi voluptates quae fugit,
+              excepturi aliquam blanditiis consectetur porro placeat.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="blog-box col-lg-4 col-10 border-end">
+        <div class="  d-flex flex-column mb-3">
+          <div class="p-2"><img class="image-height" src="{% static 'Blogg\images\cultural.jpg' %}"  alt="Cultural"></div>
+          <div class="p-2 row m-0">
+            <h3 class="col-6 ">Artists makes the World!</h3> <a class="col-6 text-end" href="/blogs.html"><i
+                class=" fa-2x fa-solid  fa-arrow-up-right-from-square" style="color: #000000; "></i></a>
+          </div>
+          <div class="p-2">
+            <p class="p-2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus pariatur sequi voluptates quae fugit,
+              excepturi aliquam blanditiis consectetur porro placeat.
+            </p>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+
+  <div class="mt-4 pt-4 text-center display-2">
+    <p>Get Started in Minutes</p>
+    <button class="btn my-btn m-2 fs-3 ">
+      Create your Substack!
+    </button>
+  </div>
+  <div class=" blog-section-footer text-center grid m-4 p-4 ">
+    <i class="fa-regular fa-circle-dot" style="color: #000000;"></i><span class="m-2 p-2">Free Forever Plan</span>
+    <i class="fa-regular fa-circle-dot" style="color: #000000;"></i><span class="m-2 p-2">No credit card required</span>
+    <i class="fa-regular fa-circle-dot" style="color: #000000;"></i><span class="m-2 p-2">Cancel anytime</span>
+  </div>
+  <!-- footer  -->
+  <footer class="row m-0  p-3 text-bg-secondary">
+    <div class="text-center">
+      <h2>Follow Us On</h2>
+    </div>
+    <div class=" text-white text-center">
+      <a href="#" target="_blank"><i style="color: white;" class="fab fa-2x fa-facebook p-1 me-1"></i></a>
+      <a href="#" target="_blank"><i style="color: white;"class="fab fa-2x fa-twitter p-1 me-1"></i></a>
+      <a href="#" target="_blank"><i style="color: white;" class="fab fa-2x fa-instagram p-1 me-1"></i></a>
+      <a href="#" target="_blank"><i style="color: white;" class="fab fa-2x fa-linkedin p-1 me-1"></i></a>
+  </div>
+
+  </footer>
+  <!-- footer ends here -->
+
+</body>
+
+</html>

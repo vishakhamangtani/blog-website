@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+        {% load static %}
+    <link rel="Website icon" type="png" href="{% static 'Blogg\images\icon.png' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'Blogg\css\utilities.css' %}" />
+    <link rel="stylesheet" href="{% static 'Blogg\css\style.css' %}" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- nav -->
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand text-center" href="index.html">
+                <i class="fa-regular fa-bookmark fa-3x m-2" style="color: #ff6719"></i>
+            </a>
+            <a class="nav-link d-flex align-items-center  text-green" href="index.html">
+                <span  class="fs-3 me-2 "> Showcase your thoughts here!</span>
+                <button class="btn my-btn btn-lg"> Start Writing</button>
+            </a>
+        </div>
+    </nav>
+    <!-- nav ends -->
+    <!-- blog  -->
+    <div class="row justify-content-center m-0">
+        <!-- blog left side -->
+        <div class="col-md-4  col-10">
+            <div class="text-center">
+                {% load static %}
+                <img src="{% static 'Blogg\images\icon.png' %}" alt="My image">
+                <!-- <img src="images/icon.png" class="rounded-5 img-fluid p-1 m-1"> -->
+                <h3 class="display-1 text-green">Substack</h3>
+            </div>
+            
+            <p class="fs-5">News and announcements for all things Bootstrap, including new releases, Bootstrap Themes,
+                and Bootstrap Icons.</p>
+            <nav class="nav  flex-column fs-3 ">
+                <a class="nav-link active text-green" href="#">All Posts</a>
+                <a class="nav-link text-green" href="#">Archive</a>
+                <a class="nav-link text-green" href="#">Bootstrap</a>
+                <a class="nav-link text-green" href="#">Subscribe</a>
+            </nav>
+        </div>
+        <!-- blog left side end -->
+        <!-- blog right side  -->
+        <div class="col">
+            <div class="display-4 mb-2">
+                Wars Won. Mental Health Destroyed
+
+            </div>
+            <div class=" d-flex justify-content-start align-items-center mb-2 p-1 ps-0">
+                {% load static %}
+                <img src="{% static 'Blogg\images\ruskin-bond.jpg' %}" width="30px" alt="" class="rounded-circle me-2">
+                <span class="h5 me-2 mb-0">Ruskin Bond</span>
+                <i class="fa-regular fa-calendar-days me-2 fa-2x"></i>
+                <span  class="h5 me-2 mb-0">23 july 2003</span>
+                            </div>
+                            <h3 class="text-end">Arts and Humanities </h3>
+            <hr class="">
+            <div class="article text-center">
+                {% load static %}
+                <img class="m-2 mx-auto " src="{% static 'Blogg\images\art.jpg' %}" height="400px" alt="nhi aarhi image">
+                <p class="fs-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, alias sequi totam distinctio, facere dolor eius accusantium in fugiat excepturi architecto accusamus illum consequatur perferendis cumque consectetur reprehenderit. Quas magnam fugiat cum sed! Placeat ut minima, explicabo eligendi non veniam nobis, illum ad dicta atque perspiciatis, esse voluptatem dolore repudiandae?</p>
+                <h3 class="h3 ">Lorem ipsum dolor sit amet.</h3>
+                <p class="fs-5">Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia qui debitis minima aut, ratione voluptatum ad nesciunt, veritatis facilis corrupti id quasi. Soluta vero omnis perspiciatis ea. Dolorem voluptates laudantium totam deleniti autem. Expedita commodi quo, nam, exercitationem est nisi aperiam nihil hic fuga, delectus nulla unde incidunt veritatis libero dignissimos inventore praesentium dolor totam quis dolorem. Odio, explicabo eius! sitl Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque officiis vero provident, harum eligendi reiciendis illum iste? Quae minus deserunt doloribus ea voluptate ipsa officia voluptas a? Fugit nihil atque tempora necessitatibus! Nobis odio ipsum reprehenderit quidem sequi dolores beatae debitis sint ullam porro laudantium eveniet quos, quam, atque corrupti a culpa iusto unde nisi? Cupiditate totam incidunt esse tempore?</p>
+            </div>
+
+        </div>
+        <!-- blog right side ends -->
+        <!-- footer  -->
+        <footer class="row  p-3 text-bg-secondary">
+            <div class="text-center">
+            <h2>Follow Us On</h2>
+            </div>
+            <div class=" text-white text-center">
+            <a href="#" target="_blank"><i style="color: white;" class="fab fa-2x fa-facebook p-1 me-1"></i></a>
+            <a href="#" target="_blank"><i style="color: white;"class="fab fa-2x fa-twitter p-1 me-1"></i></a>
+            <a href="#" target="_blank"><i style="color: white;" class="fab fa-2x fa-instagram p-1 me-1"></i></a>
+            <a href="#" target="_blank"><i style="color: white;" class="fab fa-2x fa-linkedin p-1 me-1"></i></a>
+        </div>
+
+        </footer>
+        <!-- footer ends here -->
+    </div>
+
+
+</body>
+
+</html>
