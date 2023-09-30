@@ -1,131 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rich Text Editor</title>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up For Amazing Blogs</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet" />
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
-<link rel="Website icon" type="png" href="images/icon.png">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <link rel="Website icon" type="png" href="images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="utilities.css" /> -->
+    <!-- <link rel="stylesheet" href="style.css" /> -->
     {% load static %}
     <link rel="stylesheet" href="{% static 'Blogg\css\utilities.css' %}" />
     <link rel="stylesheet" href="{% static 'Blogg\css\style.css' %}" />
-  
-<link rel="stylesheet" href="style.css" />
-<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
-    <!-- FontAwesome Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Stylesheet -->
-    <!-- <link rel="stylesheet" href="text.css" /> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <style>
-      
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  body {
-    background-color: #FFF;
-  }
-  .container {
-    background-color: #ffffff;
-    width: 90vmin;
-    padding: 50px 30px;
-    /* position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%; */
-    border-radius: 10px;
-    box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
-    margin: 10px;
-  }
-  .options {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 15px;
-  }
-  button {
-    height: 28px;
-    width: 28px;
-    display: grid;
-    place-items: center;
-    border-radius: 3px;
-    border: none;
-    background-color: #ffffff;
-    outline: none;
-    color: #020929;
-  }
-  select {
-    padding: 7px;
-    border: 1px solid #020929;
-    border-radius: 3px;
-  }
-  .options label,
-  .options select {
-    font-family: "Poppins", sans-serif;
-  }
-  .input-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  input[type="color"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: transparent;
-    width: 40px;
-    height: 28px;
-    border: none;
-    cursor: pointer;
-  }
-  input[type="color"]::-webkit-color-swatch {
-    border-radius: 15px;
-    box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #020929;
-  }
-  input[type="color"]::-moz-color-swatch {
-    border-radius: 15px;
-    box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #020929;
-  }
-  #text-input {
-    margin-top: 10px;
-    border: 1px solid #dddddd;
-    padding: 20px;
-    height: 50vh;
-  }
-  .active {
-    background-color: #e0e9ff;
-  }
-  .my-btn
-  {
-      background-color: #ff6719;
-      color: white;
-      border:0px;
-  }
-    </style>
-  </head>
 
-  <body>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
     <!-- nav -->
     <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
@@ -135,123 +37,49 @@
         </div>
     </nav>
     <!-- nav ends -->
-    <div class="container-md p-2 ">
-      <div class="options">
-        <!-- Text Format -->
-        <button id="bold" class="option-button format">
-          <i class="fa-solid fa-bold"></i>
-        </button>
-        <button id="italic" class="option-button format">
-          <i class="fa-solid fa-italic"></i>
-        </button>
-        <button id="underline" class="option-button format">
-          <i class="fa-solid fa-underline"></i>
-        </button>
-        <button id="strikethrough" class="option-button format">
-          <i class="fa-solid fa-strikethrough"></i>
-        </button>
-        <button id="superscript" class="option-button script">
-          <i class="fa-solid fa-superscript"></i>
-        </button>
-        <button id="subscript" class="option-button script">
-          <i class="fa-solid fa-subscript"></i>
-        </button>
 
-        <!-- List -->
-        <button id="insertOrderedList" class="option-button">
-          <div class="fa-solid fa-list-ol"></div>
-        </button>
-        <button id="insertUnorderedList" class="option-button">
-          <i class="fa-solid fa-list"></i>
-        </button>
+    <div class="container mt-5">
+        <h1>Create a New Blog</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <!-- Title Input -->
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
 
-        <!-- Undo/Redo -->
-        <button id="undo" class="option-button">
-          <i class="fa-solid fa-rotate-left"></i>
-        </button>
-        <button id="redo" class="option-button">
-          <i class="fa-solid fa-rotate-right"></i>
-        </button>
+            <!-- Category Dropdown -->
+            <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <select class="form-select" id="category" name="category" required>
+                    <option value="" disabled selected>Select a category</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Social">Social</option>
+                    <option value="Political">Political</option>
+                    <option value="Cultural">Cultural</option>
+                    <option value="Education">Education</option>
+                    <!-- Add more categories as needed -->
+                </select>
+            </div>
 
-        <!-- Link -->
-        <button id="createLink" class="adv-option-button">
-          <i class="fa fa-link"></i>
-        </button>
-        <button id="unlink" class="option-button">
-          <i class="fa fa-unlink"></i>
-        </button>
+            <!-- Image Upload -->
+            <div class="mb-3">
+                <label for="image" class="form-label">Image</label>
+                <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
+            </div>
 
-        <!-- Alignment -->
-        <button id="justifyLeft" class="option-button align">
-          <i class="fa-solid fa-align-left"></i>
-        </button>
-        <button id="justifyCenter" class="option-button align">
-          <i class="fa-solid fa-align-center"></i>
-        </button>
-        <button id="justifyRight" class="option-button align">
-          <i class="fa-solid fa-align-right"></i>
-        </button>
-        <button id="justifyFull" class="option-button align">
-          <i class="fa-solid fa-align-justify"></i>
-        </button>
-        <button id="indent" class="option-button spacing">
-          <i class="fa-solid fa-indent"></i>
-        </button>
-        <button id="outdent" class="option-button spacing">
-          <i class="fa-solid fa-outdent"></i>
-        </button>
+            <!-- Blog Content Textarea -->
+            <div class="mb-3">
+                <label for="content" class="form-label">Blog Content</label>
+                <textarea class="form-control" id="content" name="content" rows="8" required></textarea>
+            </div>
 
-        <!-- Headings -->
-        <select id="formatBlock" class="adv-option-button">
-          <option value="H1">H1</option>
-          <option value="H2">H2</option>
-          <option value="H3">H3</option>
-          <option value="H4">H4</option>
-          <option value="H5">H5</option>
-          <option value="H6">H6</option>
-        </select>
-
-        <!-- Font -->
-        <select id="fontName" class="adv-option-button"></select>
-        <select id="fontSize" class="adv-option-button"></select>
-
-        <!-- Color -->
-        <div class="input-wrapper">
-          <input type="color" id="foreColor" class="adv-option-button" />
-          <label for="foreColor">Font Color</label>
-        </div>
-        <div class="input-wrapper">
-          <input type="color" id="backColor" class="adv-option-button" />
-          <label for="backColor">Highlight Color</label>
-        </div>
-      </div>
-      <form >
-      <div id="text-input" contenteditable="true"></div>
-      <div class=" text-end gap-2">
-        <button style="width: auto; height: auto;" class="btn m-2  btn-primary my-btn" type="submit">Post the Blog </button>
-      </div>
+            <!-- Submit Button -->
+            <div class="text-end">
+                <button type="submit" class="btn my-btn">Submit</button>
+            </div>
+        </form>
     </div>
-  </form>
-     <!-- footer  -->
- 
-    <!-- footer  -->
-    <footer class="row m-2 mx-0 p-3 text-bg-secondary">
-      <div class="text-center">
-        <h2>Follow Us On</h2>
-      </div>
-      <div class=" text-white text-center">
-        <a href="#" target="_blank"><i style="color: white;" class="fab fa-2x fa-facebook p-1 me-1"></i></a>
-        <a href="#" target="_blank"><i style="color: white;"class="fab fa-2x fa-twitter p-1 me-1"></i></a>
-        <a href="#" target="_blank"><i style="color: white;" class="fab fa-2x fa-instagram p-1 me-1"></i></a>
-        <a href="#" target="_blank"><i style="color: white;" class="fab fa-2x fa-linkedin p-1 me-1"></i></a>
-    </div>
-  
-    </footer>
-    <!-- footer ends here -->
+</body>
 
-  
-    <!--Script-->
-    <script src="script.js"></script>
-  </body>
 </html>
-

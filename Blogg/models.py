@@ -17,10 +17,9 @@ class User(models.Model):
     password = models.CharField(max_length=255)  # Store hashed passwords for security
     
 class Blog(models.Model):
-    # Auto-generated blog ID (Primary Key 'id' is automatically created by Django)
     title = models.CharField(max_length=255)
     author = models.CharField(max_length=255)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='blog_images/')  # Requires Pillow library
+    category = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='blog_images/') 
     date_published = models.DateTimeField(auto_now_add=True)
     content = models.TextField()

@@ -45,6 +45,7 @@
             <p class="  text-center ">It's free and only takes upto a minute</p>
             <form method="post" class="fs-4">
                 {% csrf_token %}
+                
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
                     <input type="email" name="email" class="form-control" id="exampleInputEmail1" autofocus placeholder="Enter your email.."
@@ -116,10 +117,11 @@
 
                 <button type="submit" class="btn container-fluid btn-lg  my-btn">Submit</button>
             </form>
+            <div class="text-danger">{{message}}</div>
         </div>
         <div class="div">
             <div class=" text-center p-1 fs-6 text-muted">
-                Already A Substack Reader ? <a href="login.html">Login Here</a>
+                Already A Substack Reader ? <a href="/login">Login Here</a>
             </div>
         </div>
   <!-- footer  -->

@@ -28,9 +28,10 @@
 </head>
 
 <body>
-    <form method="get" >
+    <form method="post">
+        
         <div class="px-0 container-fluid row justify-content-center m-0 ">
-
+            {% csrf_token %}
             <div class="col-lg-5 col-10">
                 <h1 class=" text-center display-4 m-3 mb-1 p-3">
                     Log In
@@ -45,6 +46,8 @@
                     <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                 </div>
                 <button class="btn container-fluid btn-lg  my-btn ">Submit</button>
+                
+                <div class="text-danger">{{message}}</div>
             </div>
         </div>
     </form>
