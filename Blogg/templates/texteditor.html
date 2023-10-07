@@ -40,7 +40,7 @@
 
     <div class="container mt-5">
         <h1>Create a New Blog</h1>
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <!-- Title Input -->
             <div class="mb-3">

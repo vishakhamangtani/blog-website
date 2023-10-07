@@ -18,12 +18,25 @@ from django.contrib import admin
 from django.urls import path
 from Blogg.views import *
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
     path('./admin/', admin.site.urls),
+     path('index/<pk>', index, name='index'),
      path('index/', index, name='index'),
-     path('blogs/', blogs, name='blogs'),
+     path('blogs/<pk>', blogs, name='blogs'),
      path('login/', login, name='login'),
+     path('success/', success, name='success'),
      path('', signup, name='signup'),
      path('texteditor/', texteditor, name='texteditor'),
+     path('my_blogs/', my_blogs, name='my_blogs'),
+      path('partial_template/<str:category>/', partial_template, name='partial_template'),
+      path('edit_profile/', edit_profile, name='edit_profile'),
+      path('search/', search, name='search'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

@@ -1,0 +1,23 @@
+<div id="blogs" class=" row m-0 justify-content-center ">
+DUMMY {{category}}
+  {% for i in keypost %}
+  <div class="blog-box col-lg-4 col-10 border-end p-4">
+    <div class=" d-flex flex-column mb-3">
+      
+      <div class="p-2"><img class="image-height" src= '{{ i.image.url }}'   alt="Technology"></div>
+      <div class="p-2 row m-0">
+        <h3 class="col-9 ">{{ i.title }}{{i.id}}</h3>
+        <a class="col-3 text-end" href="{% url 'blogs' pk=i.id %}"><i
+            class=" fa-2x fa-solid  fa-arrow-up-right-from-square" style="color: #000000; "></i></a>
+      </div>
+      <h3 class="text-muted p-4">{{ i.category }}</h3>
+      <div class="p-2">
+        <p class="p-2">
+         {{ i.content }}
+        </p>
+
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

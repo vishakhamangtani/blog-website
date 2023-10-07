@@ -19,6 +19,7 @@ class User(models.Model):
 class Blog(models.Model):
     title = models.CharField(max_length=255)
     author = models.CharField(max_length=255)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.CharField(max_length=255)
     image = models.ImageField(upload_to='blog_images/') 
     date_published = models.DateTimeField(auto_now_add=True)
